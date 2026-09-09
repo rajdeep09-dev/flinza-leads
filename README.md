@@ -33,8 +33,26 @@ flinza-leads/
 │   ├── Jewelry.csv                         # 2,760 leads (Rings, Watches, Fine & Fashion Jewelry)
 │   ├── Fashion_Accessories.csv             # 1,744 leads (Bags, Eyewear, Footwear & Accessories)
 │   └── Health_and_Supplements.csv          # 1,437 leads (Vitamins, Powders, Wellness, Nootropics)
+├── still_to_be_scraped/                    # ⏳ 1,634,710 Stores Timeout Queue (Ready for retry crawl)
+│   ├── still_to_be_scraped_part1.csv       # 80.6 MB — Part 1 of timeout stores (817,355 rows)
+│   ├── still_to_be_scraped_part2.csv       # 80.7 MB — Part 2 of timeout stores (817,355 rows)
+│   ├── still_to_be_scraped_all_timeouts.csv.gz # 24.4 MB — Complete unified compressed dataset
+│   └── README.md                           # Documentation for timeout re-crawl
 └── README.md
 ```
+
+---
+
+## ⏳ Still To Be Scraped — Timeout Queue (1,634,710 Stores)
+
+During the ultra-high-speed cluster harvesting across 1,902,056 global Shopify stores, **1,634,710 stores (85.9%)** timed out due to the tight 3-second network deadline on cloud workers.
+
+These domains are valid, live storefronts that can be re-crawled with higher latency tolerance (e.g. 10s) or residential proxies:
+- **Part 1 CSV**: [`still_to_be_scraped/still_to_be_scraped_part1.csv`](still_to_be_scraped/still_to_be_scraped_part1.csv) (817,355 stores, 80.6 MB)
+- **Part 2 CSV**: [`still_to_be_scraped/still_to_be_scraped_part2.csv`](still_to_be_scraped/still_to_be_scraped_part2.csv) (817,355 stores, 80.7 MB)
+- **Compressed Full Dataset**: [`still_to_be_scraped/still_to_be_scraped_all_timeouts.csv.gz`](still_to_be_scraped/still_to_be_scraped_all_timeouts.csv.gz) (1,634,710 stores, 24.4 MB)
+- **Git Tag**: Tagged in git as `still-to-be-scraped` (and `still-didi-scraped`).
+
 
 ---
 
